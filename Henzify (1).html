@@ -1,0 +1,714 @@
+<meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>HENZIFY</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="HENZIFY – Calligraphy, content, and creative shop by Henz Quiring Pacaldo." />
+
+  <!-- Google Fonts: calligraphy + clean text -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-beige: #f5efe6;
+      --bg-beige-dark: #efe6da;
+      --green-dark-pastel: #2f5a4a;
+      --green-soft: #3f7a6a;
+      --text-dark: #1b1b1b;
+      --white: #ffffff;
+      --shadow: 0 8px 24px rgba(47, 90, 74, 0.12);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Quicksand', sans-serif;
+      background: var(--bg-beige);
+      color: var(--text-dark);
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* HEADER */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(245, 239, 230, 0.95);
+      backdrop-filter: blur(6px);
+      border-bottom: 1px solid rgba(47, 90, 74, 0.15);
+    }
+
+    .nav {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo-mark {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: var(--green-dark-pastel);
+      color: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Great Vibes', cursive;
+      font-size: 26px;
+      box-shadow: var(--shadow);
+    }
+
+    .logo-text {
+      font-family: 'Great Vibes', cursive;
+      font-size: 28px;
+      color: var(--green-dark-pastel);
+      letter-spacing: 1px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    .nav-links a {
+      color: var(--green-dark-pastel);
+      padding: 6px 10px;
+      border-radius: 8px;
+      transition: background 0.2s ease, color 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      background: var(--green-dark-pastel);
+      color: var(--white);
+    }
+
+    /* HERO */
+    .hero {
+      max-width: 1100px;
+      margin: 40px auto 20px;
+      padding: 40px 20px 20px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: clamp(36px, 8vw, 72px);
+      color: var(--green-dark-pastel);
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 16px;
+      max-width: 680px;
+      margin: 0 auto 26px;
+      color: #333;
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      background: var(--green-dark-pastel);
+      color: var(--white);
+      padding: 10px 18px;
+      border-radius: 12px;
+      font-weight: 700;
+      font-size: 14px;
+      box-shadow: var(--shadow);
+      transition: transform 0.15s ease, background 0.2s ease;
+    }
+
+    .btn:hover {
+      background: var(--green-soft);
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 2px solid var(--green-dark-pastel);
+      color: var(--green-dark-pastel);
+    }
+
+    .btn-outline:hover {
+      background: var(--green-dark-pastel);
+      color: var(--white);
+    }
+
+    /* SECTIONS */
+    section {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .section-title {
+      font-family: 'Great Vibes', cursive;
+      font-size: clamp(28px, 6vw, 44px);
+      color: var(--green-dark-pastel);
+      margin-bottom: 18px;
+      text-align: center;
+    }
+
+    /* CONNECT / CONTACTS */
+    .connect-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+    }
+
+    .contact-card {
+      background: var(--white);
+      border: 1px solid rgba(47, 90, 74, 0.15);
+      border-radius: 16px;
+      padding: 18px;
+      text-align: center;
+      box-shadow: var(--shadow);
+      transition: transform 0.15s ease;
+    }
+
+    .contact-card:hover {
+      transform: translateY(-3px);
+    }
+
+    .contact-card h3 {
+      font-size: 18px;
+      color: var(--green-dark-pastel);
+      margin-bottom: 6px;
+    }
+
+    .contact-card p {
+      font-size: 13px;
+      color: #555;
+      margin-bottom: 12px;
+    }
+
+    .contact-card .btn {
+      width: 100%;
+    }
+
+    /* SHOWCASE */
+    .showcase-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 14px;
+    }
+
+    .showcase-item {
+      background: var(--white);
+      border: 1px solid rgba(47, 90, 74, 0.15);
+      border-radius: 14px;
+      padding: 14px;
+      text-align: center;
+      box-shadow: var(--shadow);
+    }
+
+    .showcase-item h4 {
+      font-size: 16px;
+      color: var(--green-dark-pastel);
+      margin-bottom: 6px;
+    }
+
+    .showcase-item p {
+      font-size: 13px;
+      color: #555;
+      margin-bottom: 10px;
+    }
+
+    /* SERVICES */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+    }
+
+    .service-card {
+      background: var(--white);
+      border: 1px solid rgba(47, 90, 74, 0.15);
+      border-radius: 16px;
+      padding: 18px;
+      text-align: center;
+      box-shadow: var(--shadow);
+    }
+
+    .service-card h3 {
+      font-size: 18px;
+      color: var(--green-dark-pastel);
+      margin-bottom: 8px;
+    }
+
+    .service-card p {
+      font-size: 13px;
+      color: #555;
+      margin-bottom: 12px;
+    }
+
+    /* FORMS */
+    .forms-wrapper {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+
+    .form-card {
+      background: var(--white);
+      border: 1px solid rgba(47, 90, 74, 0.15);
+      border-radius: 16px;
+      padding: 18px;
+      box-shadow: var(--shadow);
+    }
+
+    .form-card h3 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 26px;
+      color: var(--green-dark-pastel);
+      margin-bottom: 12px;
+      text-align: center;
+    }
+
+    .form-group {
+      margin-bottom: 12px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 6px;
+      color: #333;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 10px 12px;
+      border-radius: 10px;
+      border: 1px solid rgba(47, 90, 74, 0.25);
+      background: #faf8f5;
+      font-family: inherit;
+      font-size: 14px;
+      color: #222;
+    }
+
+    .form-group textarea {
+      min-height: 90px;
+      resize: vertical;
+    }
+
+    .form-card .btn {
+      width: 100%;
+      margin-top: 6px;
+    }
+
+    /* ADMIN CORNER */
+    .admin-corner {
+      position: fixed;
+      bottom: 16px;
+      right: 16px;
+      z-index: 999;
+    }
+
+    .admin-btn {
+      background: var(--green-dark-pastel);
+      color: var(--white);
+      border: none;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      font-weight: 800;
+      font-size: 18px;
+      box-shadow: var(--shadow);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .admin-panel {
+      position: fixed;
+      bottom: 74px;
+      right: 16px;
+      width: min(92vw, 340px);
+      background: var(--white);
+      border: 1px solid rgba(47, 90, 74, 0.2);
+      border-radius: 14px;
+      padding: 14px;
+      box-shadow: var(--shadow);
+      display: none;
+      z-index: 998;
+    }
+
+    .admin-panel.open {
+      display: block;
+    }
+
+    .admin-panel h4 {
+      font-size: 16px;
+      color: var(--green-dark-pastel);
+      margin-bottom: 8px;
+    }
+
+    .admin-panel p {
+      font-size: 12px;
+      color: #555;
+      margin-bottom: 10px;
+    }
+
+    .admin-panel .btn {
+      width: 100%;
+      margin-top: 6px;
+      font-size: 13px;
+    }
+
+    /* FOOTER */
+    footer {
+      margin-top: 60px;
+      border-top: 1px solid rgba(47, 90, 74, 0.15);
+      background: var(--bg-beige-dark);
+    }
+
+    .footer-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 24px 20px 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      align-items: center;
+      text-align: center;
+    }
+
+    .footer-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .footer-logo .logo-mark {
+      width: 36px;
+      height: 36px;
+      font-size: 22px;
+    }
+
+    .footer-logo .logo-text {
+      font-size: 24px;
+    }
+
+    .footer-text {
+      font-size: 13px;
+      color: #444;
+      max-width: 600px;
+    }
+
+    @media (min-width: 768px) {
+      .footer-inner {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="nav">
+      <div class="logo">
+        <div class="logo-mark">H</div>
+        <div class="logo-text">HENZIFY</div>
+      </div>
+      <nav class="nav-links">
+        <a href="#connect">Connect</a>
+        <a href="#showcase">Showcase</a>
+        <a href="#services">Services</a>
+        <a href="#forms">Visitor & Feedback</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>HENZIFY</h1>
+    <p>
+      A small creative space for calligraphy, content, and simple services.  
+      Tap below to connect, view my work, or send a message.
+    </p>
+    <div class="cta-buttons">
+      <a class="btn" href="#connect">Connect with Me</a>
+      <a class="btn btn-outline" href="#showcase">See My Work</a>
+    </div>
+  </section>
+
+  <!-- CONNECT -->
+  <section id="connect">
+    <h2 class="section-title">Connect</h2>
+    <div class="connect-grid">
+      <!-- Facebook -->
+      <div class="contact-card">
+        <h3>Facebook</h3>
+        <p>Henz Quiring Pacaldo</p>
+        <a
+          class="btn"
+          href="https://www.facebook.com/henzpacaldo"
+          target="_blank"
+          rel="noopener"
+        >
+          Open Facebook
+        </a>
+      </div>
+
+      <!-- TikTok -->
+      <div class="contact-card">
+        <h3>TikTok</h3>
+        <p>Just Henz</p>
+        <a
+          class="btn"
+          href="https://www.tiktok.com/@just.henz?_r=1&_t=ZS-99LLS1EmkR6"
+          target="_blank"
+          rel="noopener"
+        >
+          Open TikTok
+        </a>
+      </div>
+
+      <!-- Email -->
+      <div class="contact-card">
+        <h3>Email</h3>
+        <p>pacaldohenz@gmail.com</p>
+        <a
+          class="btn"
+          href="mailto:pacaldohenz@gmail.com"
+        >
+          Send Email
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SHOWCASE -->
+  <section id="showcase">
+    <h2 class="section-title">Showcase</h2>
+    <div class="showcase-grid">
+      <!-- Example item 1 -->
+      <div class="showcase-item">
+        <h4>Calligraphy Sample</h4>
+        <p>A short preview of my style.</p>
+        <a
+          class="btn btn-outline"
+          href="https://www.tiktok.com/@just.henz?_r=1&_t=ZS-99LLS1EmkR6"
+          target="_blank"
+          rel="noopener"
+        >
+          Watch on TikTok
+        </a>
+      </div>
+
+      <!-- You can copy/paste more .showcase-item blocks here later -->
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <h2 class="section-title">Services</h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <h3>Buy</h3>
+        <p>Interested in my products or services? Message me to order.</p>
+        <a class="btn" href="mailto:pacaldohenz@gmail.com?subject=Buy Inquiry - HENZIFY">Inquire to Buy</a>
+      </div>
+
+      <div class="service-card">
+        <h3>Appointment</h3>
+        <p>Want to set a time to talk or order? Book an appointment.</p>
+        <a class="btn" href="mailto:pacaldohenz@gmail.com?subject=Appointment Request - HENZIFY">Request Appointment</a>
+      </div>
+
+      <div class="service-card">
+        <h3>Ask a Question</h3>
+        <p>Have questions? Send them here.</p>
+        <a class="btn" href="mailto:pacaldohenz@gmail.com?subject=Question - HENZIFY">Ask Now</a>
+      </div>
+
+      <div class="service-card">
+        <h3>Give Feedback</h3>
+        <p>Share your thoughts about my work or website.</p>
+        <a class="btn btn-outline" href="#forms">Give Feedback</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FORMS: Visitor + Feedback -->
+  <section id="forms">
+    <h2 class="section-title">Visitor & Feedback</h2>
+
+    <div class="forms-wrapper">
+      <!-- Visitor Registration -->
+      <div class="form-card">
+        <h3>Register as Visitor</h3>
+        <form action="submit.php" method="POST">
+          <input type="hidden" name="form_type" value="visitor" />
+
+          <div class="form-group">
+            <label for="v_name">Complete Name</label>
+            <input
+              type="text"
+              id="v_name"
+              name="v_name"
+              placeholder="Your full name"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="v_email">Email Address</label>
+            <input
+              type="email"
+              id="v_email"
+              name="v_email"
+              placeholder="yourname@example.com"
+              required
+            />
+          </div>
+
+          <button type="submit" class="btn">Save My Info</button>
+        </form>
+      </div>
+
+      <!-- Feedback Form -->
+      <div class="form-card">
+        <h3>Send Feedback</h3>
+        <form action="submit.php" method="POST">
+          <input type="hidden" name="form_type" value="feedback" />
+
+          <div class="form-group">
+            <label for="f_name">Your Name</label>
+            <input
+              type="text"
+              id="f_name"
+              name="f_name"
+              placeholder="Your name"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="f_email">Email (optional)</label>
+            <input
+              type="email"
+              id="f_email"
+              name="f_email"
+              placeholder="yourname@example.com"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="f_purpose">Purpose of Visit</label>
+            <select id="f_purpose" name="f_purpose" required>
+              <option value="" disabled selected>Select one</option>
+              <option value="Buying">Buying</option>
+              <option value="Appointment">Making an Appointment</option>
+              <option value="Question">Asking a Question</option>
+              <option value="Feedback">Giving Feedback</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="f_message">Your Message</label>
+            <textarea
+              id="f_message"
+              name="f_message"
+              placeholder="Say anything here..."
+              required
+            ></textarea>
+          </div>
+
+          <button type="submit" class="btn">Send Feedback</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ADMIN CORNER (simple "add content" button) -->
+  <div class="admin-corner">
+    <button class="admin-btn" id="adminToggle" title="Add Content">+</button>
+    <div class="admin-panel" id="adminPanel">
+      <h4>Add Content Corner</h4>
+      <p>
+        This is where you can later add new pictures, files, or links.  
+        For now, use this as a reminder: you can edit this website's HTML to add more showcase items or sections.
+      </p>
+      <a
+        class="btn"
+        href="mailto:pacaldohenz@gmail.com?subject=Add Content Request - HENZIFY"
+      >
+        Email Me to Add Content
+      </a>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <div class="logo-mark">H</div>
+        <div class="logo-text">HENZIFY</div>
+      </div>
+      <div class="footer-text">
+        © <span id="year"></span> HENZIFY by Henz Quiring Pacaldo.  
+        All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Admin corner toggle
+    const adminToggle = document.getElementById('adminToggle');
+    const adminPanel = document.getElementById('adminPanel');
+
+    adminToggle.addEventListener('click', () => {
+      adminPanel.classList.toggle('open');
+    });
+
+    // Close admin panel when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!adminPanel.contains(e.target) && e.target !== adminToggle) {
+        adminPanel.classList.remove('open');
+      }
+    });
+  </script>
+</body>
+</html>
